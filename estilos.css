@@ -1,0 +1,641 @@
+:root {
+    --color-principal: #2563eb;
+    --color-secundario: #f97316;
+    --color-complementario: #22c55e;
+    --color-fondo: #ffffff;
+    --color-texto: #1e293b;
+    --color-claro: #eff6ff;
+    --color-borde: #dbe4f0;
+}
+
+/* Configuración general */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+}
+
+h1,
+h2,
+h3 {
+    font-family: Helvetica, Arial, sans-serif;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+p {
+    margin-top: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.seccion {
+    padding: 80px 7%;
+}
+
+/* =========================================
+   2. ENCABEZADO Y MENÚ
+   ========================================= */
+
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 7%;
+    background-color: var(--color-fondo);
+    box-shadow: 0 2px 12px rgba(30, 41, 59, 0.08);
+}
+
+.logo {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.35rem;
+    font-weight: bold;
+    color: var(--color-principal);
+}
+
+.logo span {
+    color: var(--color-secundario);
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.menu a {
+    font-size: 0.95rem;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.menu a:hover {
+    color: var(--color-secundario);
+}
+
+/* =========================================
+   3. HERO
+   ========================================= */
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    padding: 80px 7%;
+    background-color: var(--color-claro);
+}
+
+.hero-texto {
+    flex: 1;
+}
+
+.hero-texto h1 {
+    margin: 15px 0;
+    font-size: 3rem;
+    color: var(--color-principal);
+}
+
+.hero-texto h2 {
+    margin: 10px 0 20px;
+    color: var(--color-secundario);
+}
+
+.hero-texto p {
+    max-width: 560px;
+}
+
+.hero-imagen {
+    flex: 1;
+}
+
+.hero-imagen img {
+    width: 100%;
+    height: 390px;
+    object-fit: cover;
+    border-radius: 24px;
+    box-shadow: 0 12px 30px rgba(30, 41, 59, 0.12);
+}
+
+/* =========================================
+   4. BOTONES
+   ========================================= */
+
+.boton {
+    display: inline-block;
+    padding: 12px 22px;
+    border: 2px solid var(--color-principal);
+    border-radius: 8px;
+    background-color: var(--color-principal);
+    color: var(--color-fondo);
+    font-family: Arial, sans-serif;
+    font-size: 0.95rem;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.boton:hover {
+    background-color: var(--color-secundario);
+    border-color: var(--color-secundario);
+    color: var(--color-fondo);
+}
+
+.boton-verde {
+    background-color: var(--color-complementario);
+    border-color: var(--color-complementario);
+}
+
+.boton-verde:hover {
+    background-color: #15803d;
+    border-color: #15803d;
+}
+
+/* =========================================
+   5. NOSOTROS
+   ========================================= */
+
+.nosotros {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 45px;
+}
+
+.nosotros-imagen,
+.nosotros-texto {
+    flex: 1;
+}
+
+.nosotros-imagen img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+.nosotros-texto h2 {
+    color: var(--color-principal);
+}
+
+.lista-beneficios {
+    padding-left: 22px;
+    margin-bottom: 25px;
+}
+
+.lista-beneficios li {
+    margin-bottom: 8px;
+}
+
+/* =========================================
+   6. TÍTULOS DE SECCIÓN
+   ========================================= */
+
+.titulo-seccion {
+    max-width: 750px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.titulo-seccion h2 {
+    margin: 10px 0;
+    color: var(--color-principal);
+}
+
+.titulo-seccion > p:last-child {
+    color: #526176;
+}
+
+/* =========================================
+   7. PRODUCTOS Y CURSOS
+   ========================================= */
+
+.productos {
+    background-color: var(--color-claro);
+}
+
+.productos-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.producto {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 280px;
+    max-width: 360px;
+    overflow: hidden;
+    border: 1px solid var(--color-borde);
+    border-radius: 14px;
+    background-color: var(--color-fondo);
+    box-shadow: 0 5px 18px rgba(30, 41, 59, 0.06);
+    transition: box-shadow 0.2s;
+}
+
+.producto:hover {
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.16);
+}
+
+.producto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.producto-contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+    padding: 22px;
+}
+
+.producto h3 {
+    color: var(--color-principal);
+}
+
+.producto-contenido .precio {
+    margin-top: auto;
+    margin-bottom: 18px;
+    color: #526176;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.producto .boton {
+    margin-top: 5px;
+}
+
+/* =========================================
+   8. BENEFICIOS Y SERVICIOS
+   ========================================= */
+
+.servicios-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.servicio {
+    flex: 1 1 250px;
+    padding: 30px 24px;
+    border: 1px solid var(--color-borde);
+    border-radius: 14px;
+    background-color: var(--color-fondo);
+    text-align: center;
+}
+
+.servicio .icono {
+    margin-bottom: 12px;
+    font-size: 2.5rem;
+}
+
+.servicio h3 {
+    color: var(--color-principal);
+}
+
+.servicio p {
+    margin-bottom: 0;
+}
+
+/* =========================================
+   9. TABLA
+   ========================================= */
+
+.tabla {
+    background-color: var(--color-claro);
+}
+
+.tabla-contenedor {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 18px rgba(30, 41, 59, 0.07);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--color-fondo);
+    text-align: left;
+}
+
+thead {
+    background-color: var(--color-principal);
+    color: var(--color-fondo);
+}
+
+th,
+td {
+    padding: 16px;
+    border: 1px solid var(--color-borde);
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+.nota-tabla {
+    margin-top: 18px;
+    color: #526176;
+    font-size: 0.9rem;
+}
+
+/* =========================================
+   10. GALERÍA
+   ========================================= */
+
+.galeria-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.galeria-contenedor img {
+    flex: 1 1 280px;
+    width: calc(33.333% - 20px);
+    height: 230px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* =========================================
+   11. FORMULARIO
+   ========================================= */
+
+.contacto {
+    background-color: var(--color-claro);
+}
+
+.formulario {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 30px;
+    border: 1px solid var(--color-borde);
+    border-radius: 14px;
+    background-color: var(--color-fondo);
+}
+
+.campo {
+    display: flex;
+    flex: 1 1 300px;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.campo-completo {
+    flex-basis: 100%;
+}
+
+.campo label {
+    font-weight: bold;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #b8c5d6;
+    border-radius: 7px;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    outline: 2px solid var(--color-principal);
+    outline-offset: 1px;
+}
+
+.campo textarea {
+    resize: vertical;
+}
+
+.campo button {
+    align-self: flex-start;
+}
+
+.nota-formulario {
+    max-width: 850px;
+    margin: 18px auto 0;
+    color: #526176;
+    font-size: 0.9rem;
+}
+
+/* =========================================
+   12. PIE DE PÁGINA
+   ========================================= */
+
+.pie-pagina {
+    padding: 45px 7% 0;
+    background-color: #172554;
+    color: var(--color-fondo);
+}
+
+.footer-contenido {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 35px;
+    padding-bottom: 30px;
+}
+
+.footer-marca,
+.footer-contacto,
+.footer-enlaces {
+    flex: 1 1 220px;
+}
+
+.footer-marca h2 {
+    color: var(--color-fondo);
+    font-size: 1.5rem;
+}
+
+.footer-marca p:first-of-type {
+    color: #fdba74;
+    font-weight: bold;
+}
+
+.footer-contacto h3,
+.footer-enlaces h3 {
+    color: #93c5fd;
+}
+
+.footer-contacto a,
+.footer-enlaces a {
+    color: var(--color-fondo);
+}
+
+.footer-contacto a:hover,
+.footer-enlaces a:hover {
+    color: #fdba74;
+}
+
+.footer-enlaces {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.footer-final {
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.footer-final p {
+    margin-bottom: 0;
+}
+
+/* =========================================
+   13. DISEÑO RESPONSIVE
+   ========================================= */
+
+@media (max-width: 768px) {
+    .seccion {
+        padding: 55px 6%;
+    }
+
+    .encabezado {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .menu {
+        justify-content: center;
+        gap: 12px 18px;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 55px 6%;
+        gap: 30px;
+    }
+
+    .hero-texto,
+    .hero-imagen {
+        width: 100%;
+    }
+
+    .hero-texto h1 {
+        font-size: 2.3rem;
+    }
+
+    .hero-imagen img {
+        height: 300px;
+    }
+
+    .nosotros {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .nosotros-imagen,
+    .nosotros-texto {
+        width: 100%;
+    }
+
+    .nosotros-imagen img {
+        height: 300px;
+    }
+
+    .producto {
+        flex-basis: 280px;
+        max-width: 100%;
+    }
+
+    .galeria-contenedor img {
+        width: 100%;
+        flex-basis: 100%;
+        height: 250px;
+    }
+
+    .formulario {
+        padding: 20px;
+    }
+
+    .campo {
+        flex-basis: 100%;
+    }
+
+    .footer-contenido {
+        flex-direction: column;
+        gap: 25px;
+    }
+}
+
+/* Ajustes para celulares pequeños */
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.15rem;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .hero-texto h1 {
+        font-size: 2rem;
+    }
+
+    .titulo-seccion h2,
+    .nosotros-texto h2 {
+        font-size: 1.7rem;
+    }
+
+    .boton {
+        max-width: 100%;
+    }
+
+    .tabla th,
+    .tabla td {
+        padding: 10px;
+        font-size: 0.85rem;
+    }
+}
